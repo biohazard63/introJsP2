@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Introduction : Exercices partie 2</title>
+</head>
+<body style="padding: 20px;">
+<script>
+    // Vous rédigerez le code nécessaire à la résolution de chaque exercice (bien lire les consignes).
+    // Les mots entre chevrons (ex : <name>) correspondront à la valeur des variables associées.
+    // Pour plus de lisibilité, vous commenterez le code des exercices précédents en passant à un nouvel exercice.
+    // Le projet sera à rendre via un nouveau dépôt disponible sur votre profil GitHub.
+
+    // == Exercice 6 ==
+    // Déclarez trois variables : "name", "age" et "city" dont les valeurs seront définies par l'Utilisateur.
+    // Vous afficherez, après avoir validé les données entrées par l'Utilisateur :
+    // - "Je m'appelle <name>, j'ai <age> ans (mineur.e) et j'habite à <city>." si la valeur de "age" est inférieure à 18
+    // - "Je m'appelle <name>, j'ai <age> ans (majeur.e) et j'habite à <city>." si la valeur de "age" est supérieure ou égale à 18
+
+    // let name = prompt("Entrez votre nom");
+    // let age = prompt("Entrez votre age");
+    // let city = prompt("Entrez votre ville");
+
+    // function qui(name,age,city){
+    //     if(age < 18){
+    //         console.log("Je m'appelle " + name + ", j'ai " + age + " ans (mineur.e) et j'habite à " + city + ".");
+    //     } else {
+    //         console.log("Je m'appelle " + name + ", j'ai " + age + " ans (majeur.e) et j'habite à " + city + ".");
+    //     }
+    // }
+    // qui(name,age,city);
+
+
+    // == Exercice 7 ==
+    // Déclarez deux variables : "nb1" et "nb2" dont les valeurs seront définies par l'Utilisateur.
+    // Vous afficherez, après avoir validé les données entrées par l'Utilisateur :
+    // - "<nb1> est plus grand que <nb2>" si la valeur de "nb1" est supérieure à la valeur de "nb2"
+    // - "<nb1> est plus petit que <nb2>" si la valeur de "nb1" est inférieure à la valeur de "nb2"
+    // - "<nb1> est plus égal à <nb2>" si la valeur de "nb1" est égale à la valeur de "nb2"
+    // - un message d'erreur si les données ne sont pas valides
+
+    // let nb1 = prompt("Entrez un nombre");
+    // let nb2 = prompt("Entrez un autre nombre");
+    //
+    // function comparaison(nb1,nb2){
+    //     if(nb1 > nb2){
+    //         console.log(nb1 + " est plus grand que " + nb2);
+    //     } else if(nb1 < nb2){
+    //         console.log(nb1 + " est plus petit que " + nb2);
+    //     } else if(nb1 == nb2){
+    //         console.log(nb1 + " est égal à " + nb2);
+    //     } else {
+    //         console.log("Erreur");
+    //     }
+    // }
+    // comparaison(nb1,nb2);
+
+
+    // == Exercice 8 ==
+    // En utilisant des boucles, vous afficherez dans la console une demi-pyramide de 5 lignes de haut créée à partir du caractère "*".
+    // (Voir l'image demi-pyramide.jpg se trouvant dans le dossier "/img" pour plus d'informations.)
+    //
+    // BONUS : En utilisant des boucles, vous afficherez une pyramide complète dont la hauteur est définie par l'Utilisateur.
+
+    // let nmbr = prompt("Entrez un nombre");
+    // function pyramide(){
+    //     let etoile = "*";
+    //     for(let i = 1; i <= nmbr; i++){
+    //         console.log(etoile);
+    //         etoile += "*";
+    //     }
+    // }
+    // pyramide();
+
+    // == Exercice 9 ==
+    // Déclarez deux variables : "nb1" et "nb2" dont les valeurs seront définies par l'Utilisateur.
+    // En utilisant des fonctions, vous permettrez à l'Utilisateur d'effectuer un calcul de base de son choix (somme, différence, produit, division).
+
+
+    // let nb1 = prompt("Entrez un nombre");
+    // let nb2 = prompt("Entrez un autre nombre");
+    // let operation = prompt("Entrez une opération(+,-,*,/)");
+    //
+    // function calcul(nb1,nb2,operation){
+    //     if(operation == "+"){
+    //         console.log(parseInt(nb1) + parseInt(nb2));
+    //     } else if(operation == "-"){
+    //         console.log(parseInt(nb1) - parseInt(nb2));
+    //     } else if(operation == "*"){
+    //         console.log(parseInt(nb1) * parseInt(nb2));
+    //     } else if(operation == "/"){
+    //         console.log(parseInt(nb1) / parseInt(nb2));
+    //     } else {
+    //         console.log("Erreur");
+    //     }
+    // }
+    //
+    // calcul(nb1,nb2,operation);
+
+
+    // == Exercice 10 ==
+    // En utilisant des fonctions, vous développerez une version du jeu du Juste Prix selon les règles suivantes :
+    // - L'Utilisateur doit deviner un nombre secret ;
+    // - le nombre secret est choisi aléatoirement entre 1 et 1000 ;
+    // - l'Utilisateur est invité à deviner le nombre en 10 tentatives ;
+    // - après chaque tentative de l'Utilisateur, un indice est donné sous la forme "c'est +" ou "c'est -" ;
+    // - une fois les 10 tentatives passées, l'Utilisateur est notifié et le nombre secret lui est révélé.
+    //
+    // BONUS   : Vous permettrez à l'Utilisateur de choisir sa difficulté entre facile, normal et difficile
+    //           changeant ainsi le nombre de tentatives à, respectivement, 20, 10 et 7.
+    //
+    // BONUS 2 : Vous intégrerez un deuxième mode de jeu dans lequel les tentatives sont illimitées mais le temps imparti est limité.
+    //           Les difficultés facile, normal et difficile définiront le temps qui est imparti à, respectivement, 30 secondes, 1 minutes //           et 2 minutes.
+
+    //          function jeu() {
+    //     let mode = prompt("Choisissez le mode de jeu: tentatives, temps");
+    //     let difficulty = prompt("Choisissez la difficulté: facile, normal, difficile");
+    //     let nbTentatives, timeLimit;
+    //
+    //     switch(difficulty) {
+    //         case 'facile':
+    //             nbTentatives = 20;
+    //             timeLimit = 120 * 1000;
+    //             break;
+    //         case 'normal':
+    //
+    //             nbTentatives = 10;
+    //             timeLimit = 60 * 1000;
+    //             break;
+    //         case 'difficile':
+    //             nbTentatives = 7;
+    //             timeLimit = 30 * 1000;
+    //             break;
+    //         default:
+    //             nbTentatives = 10;
+    //             timeLimit = 60 * 1000;
+    //     }
+    //
+    //     let nbSecret = Math.floor(Math.random() * 1000) + 1;
+    //     let startTime = Date.now();
+    //
+    //     if(mode === 'tentatives') {
+    //         while(nbTentatives > 0){
+    //             let nbUtilisateur = prompt("Entrez un nombre entre 1 et 1000");
+    //             if(nbUtilisateur < nbSecret){
+    //                 alert("C'est +");
+    //             } else if(nbUtilisateur > nbSecret){
+    //                 alert("C'est -");
+    //             } else {
+    //                 alert("Bravo");
+    //                 return;
+    //             }
+    //             nbTentatives--;
+    //         }
+    //         alert("Désolé, vous avez épuisé toutes vos tentatives. Le nombre secret était " + nbSecret);
+    //     } else if(mode === 'temps') {
+    //         while(true){
+    //             let nbUtilisateur = prompt("Entrez un nombre entre 1 et 1000");
+    //             let currentTime = Date.now();
+    //             if(currentTime - startTime > timeLimit){
+    //                alert("Désolé, vous avez dépassé le temps imparti. Le nombre secret était " + nbSecret);
+    //                 return;
+    //             }
+    //             if(nbUtilisateur < nbSecret){
+    //                 console.log("C'est +");
+    //             } else if(nbUtilisateur > nbSecret){
+    //                 console.log("C'est -");
+    //             } else {
+    //                 alert("Bravo");
+    //                 return;
+    //             }
+    //         }
+    //     } else {
+    //         alert("Mode de jeu non reconnu, réglé sur 'tentatives' par défaut");
+    //     }
+    // }
+    // jeu();
+
+</script>
+</body>
+</html>
